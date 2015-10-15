@@ -13,15 +13,15 @@ endif
 let g:loaded_writegooder = 1
 
 function! s:WritegooderToggle()
-    call writegood#toggle()
+    call writegooder#toggle()
 endfunction
 
 function! s:WritegooderEnable()
-    call writegood#enable()
+    call writegooder#enable()
 endfunction
 
 function! s:WritegooderDisable()
-    call writegood#disable()
+    call writegooder#disable()
 endfunction
 
 command! -bar WritegooderToggle       call s:WritegooderToggle()

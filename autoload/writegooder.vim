@@ -47,7 +47,7 @@ endfunction!
 "
 " Pattern for highlighting duplicate words, works across lines.
 "
-function writegooderer#highlight_dups()
+function writegooder#highlight_dups()
     let s:dups=matchadd('Error', '\v(<\w+>)\_s*<\1>', 10)
 endfunction
 
