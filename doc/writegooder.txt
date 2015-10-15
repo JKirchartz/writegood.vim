@@ -1,0 +1,93 @@
+*writegooderer.txt* A plugin for highlighting common writing problems in Vim.
+
+                                                                    *writegooder*
+    __      __             __                                    __     
+   /\ \  __/\ \         __/\ \__                                /\ \    
+   \ \ \/\ \ \ \  _ __ /\_\ \ ,_\    __     __     ___    ___   \_\ \   
+    \ \ \ \ \ \ \/\`'__\/\ \ \ \/  /'__`\ /'_ `\  / __`\ / __`\ /'_` \  
+     \ \ \_/ \_\ \ \ \/ \ \ \ \ \_/\  __//\ \L\ \/\ \L\ \\ \L\ \\ \L\ \ 
+      \ `\___x___/\ \_\  \ \_\ \__\ \____\ \____ \ \____/ \____/ \___,_\
+       '\/__//__/  \/_/   \/_/\/__/\/____/\/___L\ \/___/ \/___/ \/__,_ /er
+                                            /\____/                     
+                                            \_/__/                      
+   
+Author:         Joel Kirchartz
+Version         0.1.0
+Last Change:    2015-10-15
+
+===============================================================================
+CONTENTS                                                   *writegooder-contents*
+
+    1. Introduction.......................... |writegooder-introduction|
+    2. Commands.............................. |writegooder-commands|
+    3. Mappings.............................. |writegooder-mappings|
+    4. About................................. |writegooder-about|
+    5. Changelog............................. |writegooder-changelog|
+    6. License............................... |writegooder-license|
+
+===============================================================================
+1. INTRODUCTION                                        *writegooder-introduction*
+
+Writegooder is a plugin to highlight common writing problems.
+
+The plugin uses the 'Error' group to highlight errors, so I assume it will work
+on both gvim and terminal vim.
+
+Features:~
+    * Detects duplicate words (even over newlines)
+    * Highlights use of passive voice
+    * Highlights common "weasel words"
+
+===============================================================================
+2. COMMANDS                                                *writegooder-commands*
+
+-------------------------------------------------------------------------------
+:WritegooderToggle                                             *:WritegooderToggle*
+    Toggles the highlighting on and off.
+
+-------------------------------------------------------------------------------
+:WritegooderEnable                                             *:WritegooderEnable*
+    Enable highlighting.
+
+-------------------------------------------------------------------------------
+:WritegooderDisable                                           *:WritegooderDisable* 
+    Disable highlighting.
+
+===============================================================================
+3. Mappings                                                *writegooder-mappings*
+
+The default mapping for toggling the highlighting on and off is <leader>wg.
+Use :nmap to change it to something else:
+>
+    :nmap <leader>ww :WritegooderToggle<cr>
+<
+
+The :WritegooderEnable and :WritegooderDisable commands are not mapped by default,
+but feel free to add a mapping to use them:
+>
+    :nmap <leader>we :WritegooderEnable<cr>
+<
+
+===============================================================================
+4. CHANGELOG                                              *writegooder-changelog*
+
+0.1.0
+    * Initial version, everything roughly working.
+
+===============================================================================
+5. LICENSE                                                  *writegooder-license*
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 3, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; see the file COPYING.  If not, write to
+the Free Software Foundation, Inc., 51 Franklin Street, Fifth
+Floor, Boston, MA 02110-1301, USA.

@@ -1,6 +1,7 @@
-# Writegood.vim
+# Writegooder.vim
 
-Writegood is a plugin to highlight common writing problems.
+Writegooder is a plugin to highlight common writing problems, forked from
+[davidbeckingsale's writegood.vim](https://github.com/davidbeckingsale/writegood.vim)
 
 The plugin uses the `Error` group to highlight errors, so I assume it will work
 on both gvim and terminal vim.
@@ -10,21 +11,21 @@ on both gvim and terminal vim.
 * Highlights use of passive voice
 * Highlights common "weasel words" 
 
+<!---
 ## Screenshot
 
 ![Writegood mode in action](https://github.com/davidbeckingsale/writegood.vim/raw/master/writegood.png)
+--->
 
 ## About
 
-After reading Matt Might's blog post about a year ago, I was thrilled when I
-came across Benjamin Beckwith's writegood mode for Emacs, my editor of choice at
-the time. However, people change, and after jumping on the vim bandwagon about
-six months ago I forgot about both the plugin and Matt's post.
+After reading Matt Might's blog post years ago, I was going to convert it to a 
+git presubmit, but that seemed foolish since I was writing in vim; so once I 
+found Dave Beckingsale's WriteGood I started using it -- then I noticed it was 
+missing adjectives; instead of just adding them and submitting a pull request, 
+I've decided I may need to add _more functionality_ for it to work the best with 
+the way I think/write, so here we go!
 
-Eventually I found myself in the position to be doing some academic writing
-again, and was frustrutated when I couldn't find a similar plugin for vim, so
-after reading Steve Losh's 'Learn Vimscript the Hard Way' I decided to write one
-for myself.
 
 ### Links
 * Matt Might's original [blog post](http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/)
@@ -38,9 +39,8 @@ for myself.
 * Steve Losh for 'Learn Vimscript the Hard Way'.
 * Nathaniel Kane for the vim-indent-guides plugin, which I used as a
     reference for structuring and documentation.
+* Dave Beckingsale who wrote the original version of this plugin (Twitter: @dabeckingsale)
     
 ### Contact  
-* Twitter: @dabeckingsale
+* Twitter: @jkirchartz
 
-If anyone has any suggestions for improving my dodgy match usage, it would be
-much appreciated.                                                             
