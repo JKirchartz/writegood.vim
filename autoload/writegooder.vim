@@ -87,6 +87,15 @@ function writegooder#swears()
   let s:swears=matchadd('Error','\c\v<shit>|<piss>|<fuck>|<cunt>|<cocksucker>|<motherfucker>|<tits>', 10)
 endfunction
 
+"
+" Words to Avoid in Educational Writing
+" https://css-tricks.com/words-avoid-educational-writing/
+"
+
+function writegooder#avoid_words()
+  let s:swears=matchadd('Error','\c\v<obviously>|<basically>|<simply>|<of\scourse>|<clearly>|<just>|<everyone knows>|<however>|<so>|<easy>', 10)
+endfunction
+
 
 "
 " Fix common misused phrases
