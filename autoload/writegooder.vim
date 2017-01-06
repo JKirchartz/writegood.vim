@@ -22,32 +22,36 @@ endfunction
 " Turn on all match highlighting
 "
 function! writegooder#enable()
-    let w:writegooder_on = 1
-    " Highlight duplicates
-    call writegooder#highlight_dups()
-    " Highlight weasel words
-    call writegooder#highlight_weasel()
-    " Highlight passive voice
-    call writegooder#highlight_passive()
-    " Highlight adjectives
-    call writegooder#highlight_adjectives()
-    " Highlight swears
-    call writegooder#swears()
-    " Highlight words to avoid
-    call writegooder#avoid_words()
+    if !exists('w:writegooder_on') || empty(w:writegooder_on)
+        let w:writegooder_on = 1
+        " Highlight duplicates
+        call writegooder#highlight_dups()
+        " Highlight weasel words
+        call writegooder#highlight_weasel()
+        " Highlight passive voice
+        call writegooder#highlight_passive()
+        " Highlight adjectives
+        call writegooder#highlight_adjectives()
+        " Highlight swears
+        call writegooder#swears()
+        " Highlight words to avoid
+        call writegooder#avoid_words()
+    endif
 endfunction
 
 "
 " Deletes all matches
 "
 function! writegooder#disable()
-    call matchdelete(s:dups)
-    call matchdelete(s:weasel)
-    call matchdelete(s:passive)
-    call matchdelete(s:adjectives)
-    call matchdelete(s:swears)
-    call matchdelete(s:avoid)
-    let w:writegooder_on = 0
+    if exists('w:writegooder_on') && !empty(w:writegooder_on)
+        call matchdelete(s:dups)
+        call matchdelete(s:weasel)
+        call matchdelete(s:passive)
+        call matchdelete(s:adjectives)
+        call matchdelete(s:swears)
+        call matchdelete(s:avoid)
+        let w:writegooder_on = 0
+    endif
 endfunction!
 
 "
