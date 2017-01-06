@@ -31,8 +31,10 @@ function! writegooder#enable()
     call writegooder#highlight_passive()
     " Highlight adjectives
     call writegooder#highlight_adjectives()
-    " swears
+    " Highlight sweards
     call writegooder#swears()
+    " Highlight words to avoid
+    call writegooder#avoid_words()
 endfunction
 
 "
@@ -40,10 +42,11 @@ endfunction
 "
 function! writegooder#disable()
     call matchdelete(s:dups)
-    call matchdelete(s:passive)
     call matchdelete(s:weasel)
+    call matchdelete(s:passive)
     call matchdelete(s:adjectives)
     call matchdelete(s:swears)
+    call matchdelete(s:avoid)
     let w:writegooder_on = 0
 endfunction!
 
@@ -88,7 +91,7 @@ endfunction
 " https://css-tricks.com/words-avoid-educational-writing/
 "
 function! writegooder#avoid_words()
-  let s:swears=matchadd('Error','\c\v<obviously>|<basically>|<simply>|<of\scourse>|<clearly>|<just>|<everyone knows>|<however>|<so>|<easy>', 10)
+  let s:avoid=matchadd('Error','\c\v<obviously>|<basically>|<simply>|<of\scourse>|<clearly>|<just>|<everyone knows>|<however>|<so>|<easy>', 10)
 endfunction
 
 
