@@ -31,7 +31,7 @@ function! writegooder#enable()
     call writegooder#highlight_passive()
     " Highlight adjectives
     call writegooder#highlight_adjectives()
-    " Highlight sweards
+    " Highlight swears
     call writegooder#swears()
     " Highlight words to avoid
     call writegooder#avoid_words()
