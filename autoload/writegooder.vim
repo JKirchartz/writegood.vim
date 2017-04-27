@@ -97,9 +97,11 @@ endfunction
 "
 " Words to Avoid in Educational Writing
 " https://css-tricks.com/words-avoid-educational-writing/
+" 31 Words and Phrases You No Longer Need
+" https://www.grammarly.com/blog/words-you-no-longer-need/
 "
 function! writegooder#avoid_words()
-  let avoid='obviously|basically|simply|of course|clearly|just|everyone knows|however|so|easy'
+  let avoid='obviously|basically|simply|essentially|of course|clearly|just|everyone knows|however|so|easy|at all times|each and every|as yet|in order|totally|completely|absolutely|literally|actually|very|really|quite|rather|extremely|in the process of|as a matter of fact|all of|as being|during the course of|for all intents and purposes|for the most part|point in time|up|down'
   let s:avoid=matchadd('Error','\c\v<(' . avoid . ')>', 10)
 endfunction
 
