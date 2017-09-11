@@ -36,6 +36,8 @@ function! writegooder#enable()
         call writegooder#swears()
         " Highlight words to avoid
         call writegooder#avoid_words()
+        " Highlight non-eprime words
+        call writegooder#eprime()
     endif
 endfunction
 
@@ -104,6 +106,18 @@ function! writegooder#avoid_words()
   let avoid='obviously|basically|simply|essentially|of course|clearly|just|everyone knows|however|so|easy|at all times|each and every|as yet|in order|totally|completely|absolutely|literally|actually|very|really|quite|rather|extremely|in the process of|as a matter of fact|all of|as being|during the course of|for all intents and purposes|for the most part|point in time|up|down'
   let s:avoid=matchadd('Error','\c\v<(' . avoid . ')>', 10)
 endfunction
+
+"
+" E-Prime
+" https://en.wikipedia.org/wiki/E-Prime
+" excludes all forms of the verb `to be`
+"
+
+function! writegooder#eprime()
+  let eprime="be\|being\|been\|am\|is\|are\|was\|were\|maybe\|isn't\|aren't\|wasn't\|weren't\|I'm\|you're\|we're\|they're\|he's\|she's\|it's\|there's\|here's\|where's\|how's\|what's\|who's\|that's"
+  let s:eprime=matchadd('Error','\c\v<(' . eprime . ')>', 10)
+endfunction
+
 
 
 "
