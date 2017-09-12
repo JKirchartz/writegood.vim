@@ -56,8 +56,15 @@ Features:~
 ===============================================================================
 3. Mappings                                                *writegooder-mappings*
 
-The default mapping for toggling the highlighting on and off is <leader>wg.
+The default mapping for toggling the highlighting on and off is <leader>wg, but
+you can disable it by adding the following somewhere inside your .vimrc file:
+
+>
+    set g:writegooder_disable_mappings = 1
+<
+
 Use :nmap to change it to something else:
+
 >
     :nmap <leader>ww :WritegooderToggle<cr>
 <
