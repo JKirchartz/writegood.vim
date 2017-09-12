@@ -11,6 +11,9 @@ if exists('g:loaded_writegooder') || &cp
 endif
 
 let g:loaded_writegooder = 1
+if !exists("g:writegooder_disable_mappings")
+    let g:writegooder_disable_mappings = 0
+endif
 
 function! s:WritegooderToggle()
     call writegooder#toggle()
@@ -29,4 +32,6 @@ command! -bar WritegooderEnable       call s:WritegooderEnable()
 command! -bar WritegooderDisable      call s:WritegooderDisable()
 
 " Default mapping
-nmap <leader>wg :WritegooderToggle<cr>
+if !g:writegooder_disable_mappings
+    nmap <leader>wg :WritegooderToggle<cr>
+endif
