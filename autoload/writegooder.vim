@@ -52,6 +52,7 @@ function! writegooder#disable()
         call matchdelete(s:adjectives)
         call matchdelete(s:swears)
         call matchdelete(s:avoid)
+        call matchdelete(s:eprime)
         let w:writegooder_on = 0
     endif
 endfunction!
